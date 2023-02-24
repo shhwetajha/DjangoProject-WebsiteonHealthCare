@@ -1,0 +1,15 @@
+{% extends 'hms/main.html' %}
+{% load static %}
+{% block title %}BOOKINGS{% endblock title %}
+{% block body %} 
+<form method="POST">
+    {% csrf_token %}
+   
+<table style="margin:50px; text-align:center ">
+    <tr><td colspan="2" style="color:gray"><h1>BOOKING</h1></td></tr>
+    {{forms}}
+   
+    <tr><td><button type="submit">Book your appointment</button></td></tr>
+</table>
+</form>
+{% endblock body %}
